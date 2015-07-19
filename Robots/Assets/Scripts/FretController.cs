@@ -13,6 +13,7 @@ public class FretController : MonoBehaviour {
 
 	bool facingRight = true;
 	bool canJump = true;
+	bool canTrigger = true;
 	bool grounded = false;
 	float groundRadius = 0.2f;
 
@@ -47,11 +48,21 @@ public class FretController : MonoBehaviour {
 		if(Input.GetAxis ("FretJump") == 0)
 			canJump = true;
 
+		if (Input.GetAxis ("FretInteract") == 0)
+			canTrigger = true;
+
 		if (Input.GetAxis ("FretJump") > 0 && grounded && canJump) {
 			canJump = false;
 			grounded = false;
 			anim.SetBool("grounded", grounded);
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+		}
+	}
+
+	void OnTriggerStay2D(Collider2D coll) {
+		if (Input.GetAxis ("FretInteract") > 0 && coll.gameObject.tag == "Interactive" && canTrigger) {
+			canTrigger = false;
+			coll.gameObject.GetComponent<TriggerSender> ().SendTrigger ();
 		}
 	}
 

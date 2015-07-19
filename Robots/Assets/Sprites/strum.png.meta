@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 8bcde8d3a207c8143bdebea51c92a498
-timeCreated: 1437346459
+guid: 66e7f967501d5ea4483210ce6202d4ca
+timeCreated: 1437342367
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Handle
-    21300002: Base
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -32,14 +30,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,27 +48,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: Handle
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 48
-        width: 5
-        height: 40
-      alignment: 7
-      pivot: {x: .5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Base
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 20
-        width: 40
-        height: 24
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
   assetBundleName: 

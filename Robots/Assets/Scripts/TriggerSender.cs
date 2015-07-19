@@ -5,11 +5,15 @@ public class TriggerSender : MonoBehaviour {
 
 	public GameObject[] triggerReceivers;
 	public bool isReversible = false;
+	public bool isAnimated = false;
+
 	bool triggered = false;
+	Animator anim;
 
 	// Use this for initialization
 	void Start () {
-	
+		if (isAnimated)
+			anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -24,6 +28,9 @@ public class TriggerSender : MonoBehaviour {
 
 		// Invert our state
 		triggered = !triggered;
+
+		if (isAnimated)
+			anim.SetBool ("on", triggered);
 
 		foreach (GameObject o in triggerReceivers) {
 			o.GetComponent<TriggerReceiver>().executeTrigger(triggered);

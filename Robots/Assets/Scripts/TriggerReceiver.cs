@@ -13,7 +13,7 @@ public class TriggerReceiver : MonoBehaviour {
 	
 	}
 
-	public void executeTrigger() {
-
+	public void executeTrigger(bool triggered) {
+		transform.gameObject.SendMessage ("onTrigger", triggered);
 	}
 }
