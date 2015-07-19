@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Player
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Blocking Layer
+  - Player
   - 
   - 
   - 
@@ -40,4 +42,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2622036739
+    locked: 0
+  - name: Floor
+    uniqueID: 3436291991
+    locked: 0
+  - name: Items
+    uniqueID: 2287938701
+    locked: 0
+  - name: NPCs
+    uniqueID: 3156333269
+    locked: 0
+  - name: Player
+    uniqueID: 1069676519
     locked: 0
