@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ForkilftController : MonoBehaviour {
-
+public class HingeController : MonoBehaviour {
+	
 	Animator animator;
-
+	
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
-		animator.SetBool ("movedown", true);
-
+		animator.SetBool ("drop", false);
+		
 	}
 	
 	// Update is called once per frame
@@ -19,11 +19,7 @@ public class ForkilftController : MonoBehaviour {
 	
 	public void onTrigger(bool triggered) {
 		if (triggered) {
-			animator.SetBool ("movedown", false);
-			animator.SetBool ("moveup", true);
-		} else {
-			animator.SetBool ("moveup", false);
-			animator.SetBool ("movedown", true);
+			animator.SetBool ("drop", true);
 		}
 	}
 }
