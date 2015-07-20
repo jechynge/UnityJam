@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Player
   - Interactive
+  - Grabable
+  - Heavy Grabable
   layers:
   - Default
   - TransparentFX
