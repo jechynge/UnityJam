@@ -46,17 +46,17 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GarageDoorController.cs" />
-     <Compile Include="Assets\HingeController.cs" />
-     <Compile Include="Assets\RampController.cs" />
      <Compile Include="Assets\Scripts\DoorController.cs" />
      <Compile Include="Assets\Scripts\ForkliftController.cs" />
      <Compile Include="Assets\Scripts\FretController.cs" />
+     <Compile Include="Assets\Scripts\GarageDoorController.cs" />
+     <Compile Include="Assets\Scripts\HingeController.cs" />
+     <Compile Include="Assets\Scripts\RampController.cs" />
      <Compile Include="Assets\Scripts\StrumController.cs" />
      <Compile Include="Assets\Scripts\TriggerReceiver.cs" />
      <Compile Include="Assets\Scripts\TriggerSender.cs" />
      <Compile Include="Assets\Scripts\TriggerSenderButton.cs" />
-     <Compile Include="Assets\WeightController.cs" />
+     <Compile Include="Assets\Scripts\WeightController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

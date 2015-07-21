@@ -9,7 +9,7 @@ public class TriggerSenderButton : MonoBehaviour {
 
 	bool triggered = false;
 	Animator anim;
-
+	bool thingOnButton = false;
 	// Use this for initialization
 	void Start () {
 		gameObject.GetComponent<Animator> ().SetBool ("buttonstate", false);
@@ -19,16 +19,21 @@ public class TriggerSenderButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		thingOnButton = false;
 	}
 
-	void OnCollisionEnter2D (Collision2D collision) {
-		Debug.Log ("On button");
-		SendTrigger ();
+
+
+	void OnCollisionStay2D (Collision2D collision) {
+		thingOnButton = true;
+		if (!triggered) {
+			SendTrigger ();
+		}
 	}
 
 	void OnCollisionExit2D (Collision2D collision) {
-		SendTrigger ();
+			if (!thingOnButton)
+				SendTrigger ();
 	}
 
 	public void SendTrigger() {
