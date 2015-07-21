@@ -5,10 +5,10 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: hinge
+  m_Name: button
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: drop
+  - m_Name: buttonstate
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -17,7 +17,7 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: 110781362}
+    m_StateMachine: {fileID: 110708054}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -28,18 +28,38 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 0}
   m_MultiThreadedStateMachine: 1
---- !u!1101 &110101436
+--- !u!1101 &110136522
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 110205108}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: .625
+  m_TransitionOffset: 0
+  m_ExitTime: .375
+  m_HasExitTime: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &110149282
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: drop
+  - m_ConditionMode: 2
+    m_ConditionEvent: buttonstate
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 110263948}
+  m_DstState: {fileID: 110200994}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -51,7 +71,27 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &110131296
+--- !u!1101 &110165736
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 110297568}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: .75
+  m_TransitionOffset: 0
+  m_ExitTime: .25
+  m_HasExitTime: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &110198750
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -59,99 +99,94 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: drop
+    m_ConditionEvent: buttonstate
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 110263948}
+  m_DstState: {fileID: 110238182}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: .234374985
+  m_TransitionDuration: 3.74999976
   m_TransitionOffset: 0
-  m_ExitTime: .765625
+  m_ExitTime: 0
   m_HasExitTime: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &110175706
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: drop
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 110285012}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: .375
-  m_TransitionOffset: 0
-  m_ExitTime: .625
-  m_HasExitTime: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1102 &110257628
+--- !u!1102 &110200994
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: hingeup
+  m_Name: buttonrelease
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
-  - {fileID: 110101436}
+  - {fileID: 110165736}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 9f497850c6d2545a690919c3d5423035, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3dff2afae36234c9f8fa8d6e5340ba13, type: 2}
   m_Tag: 
---- !u!1102 &110263948
+--- !u!1102 &110205108
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: hingedrop
+  m_Name: buttondown
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
-  - {fileID: 110175706}
+  - {fileID: 110149282}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 06b8cd2adff274725ba60dc7e6b6996c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1f1604e75af0842918f98006fd4770f8, type: 2}
   m_Tag: 
---- !u!1102 &110285012
+--- !u!1102 &110238182
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: hingeraise
+  m_Name: buttonpress
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
-  - {fileID: 110131296}
+  - {fileID: 110136522}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 7400000, guid: 3c848c128f8524d43b52a2a185756199, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8fbdd5cae317643e1a9f34758bbe09a2, type: 2}
   m_Tag: 
---- !u!1107 &110781362
+--- !u!1102 &110297568
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: buttonup
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 110198750}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_Motion: {fileID: 7400000, guid: 9961b7e7edc2b4284a75192354fc21bd, type: 2}
+  m_Tag: 
+--- !u!1107 &110708054
 AnimatorStateMachine:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -160,24 +195,27 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 110263948}
-    m_Position: {x: 235, y: 65, z: 0}
+    m_State: {fileID: 110297568}
+    m_Position: {x: 504, y: 132, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 110285012}
-    m_Position: {x: 270, y: 130, z: 0}
+    m_State: {fileID: 110238182}
+    m_Position: {x: 396, y: 60, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 110257628}
-    m_Position: {x: 432, y: 0, z: 0}
+    m_State: {fileID: 110200994}
+    m_Position: {x: 408, y: 204, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 110205108}
+    m_Position: {x: 240, y: 132, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
     data:
-      first: {fileID: 110781362}
+      first: {fileID: 110708054}
       second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 396, y: -84, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 110257628}
+  m_DefaultState: {fileID: 110297568}

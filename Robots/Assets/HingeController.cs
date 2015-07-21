@@ -4,7 +4,7 @@ using System.Collections;
 public class HingeController : MonoBehaviour {
 	
 	Animator animator;
-	
+
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
@@ -20,6 +20,8 @@ public class HingeController : MonoBehaviour {
 	public void onTrigger(bool triggered) {
 		if (triggered) {
 			animator.SetBool ("drop", true);
+		} else {
+			animator.SetBool ("drop", false);
 		}
 	}
 }
