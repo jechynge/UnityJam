@@ -1,9 +1,19 @@
 fileFormatVersion: 2
 guid: 2a877cae9c7c95d4d8f0dcc0d1e1fdcc
-timeCreated: 1437432488
+timeCreated: 1437433808
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: fret_2_0
+    21300002: fret_2_1
+    21300004: fret_2_2
+    21300006: fret_2_3
+    21300008: fret_2_4
+    21300010: fret_2_5
+    21300012: fret_2_6
+    21300014: fret_2_7
+    21300016: fret_2_8
+    21300018: fret_2_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,25 +40,125 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: fret_2_0
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 404
+        width: 210
+        height: 288
+      alignment: 9
+      pivot: {x: .774999976, y: .843692541}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fret_2_1
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 658
+        width: 144
+        height: 132
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fret_2_2
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 599
+        width: 415
+        height: 619
+      alignment: 9
+      pivot: {x: .5, y: .176984206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fret_2_3
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 663
+        width: 144
+        height: 127
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fret_2_4
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 396
+        width: 231
+        height: 296
+      alignment: 9
+      pivot: {x: .200049996, y: .850000024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fret_2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 441
+        width: 127
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fret_2_6
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 378
+        width: 65
+        height: 96
+      alignment: 9
+      pivot: {x: .409999996, y: .930000007}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fret_2_7
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 378
+        width: 62
+        height: 108
+      alignment: 9
+      pivot: {x: .439999998, y: .970000029}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fret_2_8
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 0
+        width: 91
+        height: 242
+      alignment: 9
+      pivot: {x: .5, y: .851759136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fret_2_9
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 0
+        width: 91
+        height: 242
+      alignment: 9
+      pivot: {x: .521755338, y: .851759136}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

@@ -9,6 +9,7 @@ TagManager:
   - Interactive
   - Grabable
   - Heavy Grabable
+  - Pushable
   layers:
   - Default
   - TransparentFX
