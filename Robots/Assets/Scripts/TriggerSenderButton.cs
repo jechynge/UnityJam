@@ -19,21 +19,22 @@ public class TriggerSenderButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		thingOnButton = false;
+		if (triggered) {
+			if (!thingOnButton)
+				SendTrigger ();
+		}
 	}
 
 
 
 	void OnCollisionStay2D (Collision2D collision) {
 		thingOnButton = true;
-		if (!triggered) {
+		if (!triggered)
 			SendTrigger ();
-		}
 	}
 
 	void OnCollisionExit2D (Collision2D collision) {
-			if (!thingOnButton)
-				SendTrigger ();
+		thingOnButton = false;
 	}
 
 	public void SendTrigger() {
