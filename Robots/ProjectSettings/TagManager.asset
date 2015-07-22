@@ -10,6 +10,7 @@ TagManager:
   - Grabable
   - Heavy Grabable
   - Pushable
+  - Crusher
   layers:
   - Default
   - TransparentFX
