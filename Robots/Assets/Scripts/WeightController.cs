@@ -16,8 +16,8 @@ public class WeightController : MonoBehaviour {
 	
 	public void onTrigger(bool triggered) {
 		if (triggered) {
-			gameObject.AddComponent<Rigidbody2D>();
-			rigidbody = gameObject.GetComponent<Rigidbody2D>(); 
+			gameObject.transform.parent.gameObject.AddComponent<Rigidbody2D>();
+			rigidbody = gameObject.transform.parent.gameObject.GetComponent<Rigidbody2D>(); 
 			rigidbody.mass = 100;
 		}
 	}
