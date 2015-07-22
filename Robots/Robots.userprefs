@@ -4,7 +4,7 @@
     <Files>
       <File FileName="Assets/Scripts/DoorController.cs" Line="6" Column="1" />
       <File FileName="Assets/Scripts/TriggerSender.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TriggerSenderButton.cs" Line="27" Column="24" />
+      <File FileName="Assets/Scripts/TriggerSenderButton.cs" Line="26" Column="1" />
       <File FileName="Assets/Scripts/TriggerReceiver.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/FretController.cs" Line="1" Column="1" />
     </Files>
