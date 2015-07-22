@@ -1,9 +1,19 @@
 fileFormatVersion: 2
 guid: 4250d1401c3a08041b271248ba054924
-timeCreated: 1437432491
+timeCreated: 1437536721
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: strum_2_0
+    21300002: strum_2_1
+    21300004: strum_2_2
+    21300006: strum_2_3
+    21300008: strum_2_4
+    21300010: strum_2_5
+    21300012: strum_2_6
+    21300014: strum_2_7
+    21300016: strum_2_8
+    21300018: strum_2_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,25 +40,125 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 600
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: strum_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 769
+        width: 273
+        height: 506
+      alignment: 9
+      pivot: {x: .729999483, y: .851589978}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: strum_2_1
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 1224
+        width: 271
+        height: 322
+      alignment: 9
+      pivot: {x: .939999998, y: .939999998}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: strum_2_2
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 811
+        width: 706
+        height: 1172
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: strum_2_3
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 1229
+        width: 271
+        height: 317
+      alignment: 9
+      pivot: {x: .0900000036, y: .930000007}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: strum_2_4
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 769
+        width: 278
+        height: 506
+      alignment: 9
+      pivot: {x: .261588782, y: .858484089}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: strum_2_5
+      rect:
+        serializedVersion: 2
+        x: 2721
+        y: 571
+        width: 745
+        height: 870
+      alignment: 9
+      pivot: {x: .26120162, y: .247397095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: strum_2_6
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 569
+        width: 112
+        height: 148
+      alignment: 9
+      pivot: {x: .560000002, y: .879999995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: strum_2_7
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 569
+        width: 112
+        height: 153
+      alignment: 9
+      pivot: {x: .439999998, y: .839999974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: strum_2_8
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 0
+        width: 156
+        height: 402
+      alignment: 9
+      pivot: {x: .589444697, y: .838419676}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: strum_2_9
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 0
+        width: 205
+        height: 397
+      alignment: 9
+      pivot: {x: .329838157, y: .842681885}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

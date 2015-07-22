@@ -11,7 +11,8 @@ public class StrumController : MonoBehaviour {
 	Rigidbody2D body;
 	
 	bool facingRight = true;
-	bool canTrigger = true;
+	bool canSwing = true;
+    bool canSmash = true;
 	bool grounded = false;
 	float groundRadius = 0.2f;
 	
@@ -43,14 +44,16 @@ public class StrumController : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (Input.GetAxis ("FretInteract") == 0)
-			canTrigger = true;
+		if (Input.GetAxis ("StrumSwing") == 0)
+			canSwing = true;
+
+        if (Input.GetAxis("StrumSmash") == 0)
+            canSmash = true;
 	}
 	
 	void OnTriggerStay2D(Collider2D coll) {
-		if (Input.GetAxis ("FretInteract") > 0 && coll.gameObject.tag == "Interactive" && canTrigger) {
-			canTrigger = false;
-			coll.gameObject.GetComponent<TriggerSender> ().SendTrigger ();
+		if (Input.GetAxis ("StrumGrab") > 0 && coll.gameObject.tag == "Interactive") {
+			// TODO: grab swing
 		}
 	}
 
