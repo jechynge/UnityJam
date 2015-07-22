@@ -50,9 +50,9 @@
      <Compile Include="Assets\Scripts\ForkliftController.cs" />
      <Compile Include="Assets\Scripts\FretController.cs" />
      <Compile Include="Assets\Scripts\GarageDoorController.cs" />
+     <Compile Include="Assets\Scripts\GuiManager.cs" />
      <Compile Include="Assets\Scripts\HingeController.cs" />
      <Compile Include="Assets\Scripts\RampController.cs" />
-     <Compile Include="Assets\Scripts\GuiManager.cs" />
      <Compile Include="Assets\Scripts\StrumController.cs" />
      <Compile Include="Assets\Scripts\TriggerReceiver.cs" />
      <Compile Include="Assets\Scripts\TriggerSender.cs" />
