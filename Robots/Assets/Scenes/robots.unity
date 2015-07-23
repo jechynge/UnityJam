@@ -231,7 +231,6 @@ DistanceJoint2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153484769}
   m_Enabled: 0
-  serializedVersion: 3
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0}
@@ -565,11 +564,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 402610, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.24000001
+      value: 3.05999994
       objectReference: {fileID: 0}
     - target: {fileID: 402610, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.62
+      value: -.74000001
       objectReference: {fileID: 0}
     - target: {fileID: 402610, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -602,6 +601,14 @@ Prefab:
     - target: {fileID: 156632, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 402610, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402610, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
