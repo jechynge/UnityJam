@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11413018}
   - 114: {fileID: 11485618}
   - 61: {fileID: 6107522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 488160}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GarageDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

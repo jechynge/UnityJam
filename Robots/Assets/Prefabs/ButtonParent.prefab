@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 497816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ButtonParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 114: {fileID: 11430638}
   - 61: {fileID: 6153146}
   - 95: {fileID: 9534332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
