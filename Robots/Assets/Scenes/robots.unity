@@ -129,6 +129,7 @@ GameObject:
   - 61: {fileID: 153484772}
   - 114: {fileID: 153484771}
   - 232: {fileID: 153484776}
+  - 114: {fileID: 153484777}
   m_Layer: 0
   m_Name: NewStrum
   m_TagString: Untagged
@@ -143,7 +144,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 153484769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0700000003, y: 10.96, z: 0}
+  m_LocalPosition: {x: .0700000003, y: 4.55000019, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 250328122}
@@ -205,7 +206,7 @@ Rigidbody2D:
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
 --- !u!95 &153484775
 Animator:
@@ -235,8 +236,20 @@ DistanceJoint2D:
   m_ConnectedRigidBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
-  m_Distance: 2.5
-  m_MaxDistanceOnly: 0
+  m_Distance: 1
+  m_MaxDistanceOnly: 1
+--- !u!114 &153484777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 153484769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c769fc90bed80554b8d5d385effc0a77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDragDistance: 2
 --- !u!1 &163121895
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +581,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 402610, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.74000001
+      value: -1.63999999
       objectReference: {fileID: 0}
     - target: {fileID: 402610, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -602,13 +615,13 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 402610, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
+    - target: {fileID: 5098596, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
+      propertyPath: m_SleepingMode
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 402610, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
+    - target: {fileID: 5098596, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4221ceeadccbc440da4f9f807a2b409b, type: 2}
@@ -1769,7 +1782,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1628316319}
   - 212: {fileID: 1628316320}
-  m_Layer: 0
+  - 58: {fileID: 1628316321}
+  m_Layer: 9
   m_Name: guitar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1783,7 +1797,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1628316318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0780000016, y: -.680000007, z: 0}
+  m_LocalPosition: {x: .140000001, y: -.620000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1308533014}
@@ -1814,6 +1828,19 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300010, guid: 4250d1401c3a08041b271248ba054924, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!58 &1628316321
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1628316318}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: .50999999, y: .670000017}
+  serializedVersion: 2
+  m_Radius: .50999999
 --- !u!1 &1663588847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,7 +2115,6 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  pushPower: 2
 --- !u!50 &2044772847
 Rigidbody2D:
   m_ObjectHideFlags: 0
