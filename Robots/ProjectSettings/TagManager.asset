@@ -7,8 +7,8 @@ TagManager:
   - Enemy
   - Player
   - Interactive
-  - Grabable
-  - Heavy Grabable
+  - Draggable
+  - Heavy Draggable
   - Pushable
   - Crusher
   - Player 2
