@@ -11,6 +11,7 @@ TagManager:
   - Heavy Grabable
   - Pushable
   - Crusher
+  - Player 2
   layers:
   - Default
   - TransparentFX
