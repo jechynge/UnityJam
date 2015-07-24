@@ -1,10 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SceneExit.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TriggerSenderButton.cs">
     <Files>
-      <File FileName="Assets\Scripts\FretController.cs" Line="53" Column="40" />
-      <File FileName="Assets\Scripts\SceneExit.cs" Line="10" Column="33" />
-      <File FileName="Assets\Scripts\StrumController.cs" Line="19" Column="32" />
+      <File FileName="Assets/Scripts/HitController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TriggerReceiver.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TriggerSender.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TriggerSenderButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/RampController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CrushingController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/WeightController.cs" Line="24" Column="2" />
+      <File FileName="Assets/Scripts/StrumController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/AttackController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/FretController.cs" Line="125" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
