@@ -67,8 +67,9 @@ public class FretController : MonoBehaviour {
 		GetComponent<AudioSource> ().PlayOneShot (sfxInteract);
 
 
-        if (Input.GetAxis("FretJump") > 0 && grounded && canJump && !smashed && Input.GetAxis("FretCombine1") == 0 && Input.GetAxis("FretCombine2") == 0)
+        if (Input.GetAxis("FretJump") > 0 && grounded && canJump && !smashed)
         {
+			Debug.Log ("Jumping");
 			canJump = false;
 			grounded = false;
 			anim.SetBool("grounded", grounded);
@@ -112,7 +113,7 @@ public class FretController : MonoBehaviour {
 
     public bool Combine()
     {
-        return Input.GetAxis("FretCombine1") > 0 && Input.GetAxis("FretCombine2") > 0 && Input.GetAxis("FretJump") > 0;
+        return Input.GetAxis("FretCombine1") > 0 && Input.GetAxis("FretCombine2") > 0 && Input.GetAxis("FretCombine") > 0;
     }
 
 	void Flip() {
