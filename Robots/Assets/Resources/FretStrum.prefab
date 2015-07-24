@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 432468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FretStrum
   m_TagString: Player 3
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 475082}
   - 212: {fileID: 21270184}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: upper_left_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 430514}
   - 212: {fileID: 21201710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: upper_right_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 439218}
   - 212: {fileID: 21295276}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lower_left_leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 404744}
   - 212: {fileID: 21255108}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lower_left_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 404272}
   - 212: {fileID: 21288352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: upper_left_leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 441160}
   - 212: {fileID: 21212662}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lower_right_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 445466}
   - 212: {fileID: 21264550}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: upper_right_leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +539,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 413086}
   - 212: {fileID: 21210362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lower_right_leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1892,6 +1892,14 @@ Prefab:
       propertyPath: sfxattackOverHand
       value: 
       objectReference: {fileID: 8300000, guid: 77ae5f521b30040dfb3ceee61acd87d3, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 103866}

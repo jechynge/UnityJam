@@ -27,7 +27,7 @@ TagManager:
   - 
   - Blocking Layer
   - Player
-  - 
+  - Foreground
   - 
   - 
   - 
@@ -67,4 +67,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1069676519
+    locked: 0
+  - name: Foreground
+    uniqueID: 1270467393
     locked: 0
