@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class AttackController : MonoBehaviour {
 
     public bool isAttacking = false;
     public float hitForce = 1000f;
-    public string[] hittableTags;
+    public List<string> smashableTags;
     public CircleCollider2D attackCollider;
 
     Animator anim;
 
     bool canAttackUnderhand = true;
     bool canAttackOverhand = true;
-
-    static string attackTag = "attack";
+    string currentAttack = "";
+    uint currentAttackId = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -37,7 +37,6 @@ public class AttackController : MonoBehaviour {
 
         if (isAttacking)
         {
-            
             return; // If we're already attacking, we don't nee to check for new attacks
         }
 
@@ -46,6 +45,8 @@ public class AttackController : MonoBehaviour {
             anim.SetTrigger("attackUnderhand");
             canAttackUnderhand = false;
             isAttacking = true;
+            currentAttack = "under";
+            currentAttackId++;
         }
 
         if (Input.GetAxis("StrumOverhand") > 0 && canAttackOverhand && !isAttacking)
@@ -53,7 +54,29 @@ public class AttackController : MonoBehaviour {
             anim.SetTrigger("attackOverhand");
             canAttackOverhand = false;
             isAttacking = true;
+            currentAttack = "over";
+            currentAttackId++;
         }
-        
 	}
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (!isAttacking) return;
+
+        switch (currentAttack)
+        {
+            case "under":
+                // We're hitting Fret
+                if(coll.tag == "Player")
+                    coll.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, hitForce));
+                break;
+            case "over":
+                // We're hitting something that can be smashed
+                if(smashableTags.Contains(coll.tag))
+                    coll.GetComponent<HitController>().Smash(currentAttackId);
+                break;
+        }
+
+        
+    }
 }

@@ -12,8 +12,6 @@ public class StrumController : MonoBehaviour {
 	Rigidbody2D body;
 	
 	bool facingRight = true;
-	bool canSwing = true;
-    bool canSmash = true;
 	bool grounded = false;
 	float groundRadius = 0.2f;
 	
