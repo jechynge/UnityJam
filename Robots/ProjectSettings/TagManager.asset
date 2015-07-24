@@ -12,6 +12,7 @@ TagManager:
   - Pushable
   - Crusher
   - Player 2
+  - Smashable
   layers:
   - Default
   - TransparentFX
