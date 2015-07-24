@@ -52,11 +52,9 @@
      <Compile Include="Assets\Scripts\DragController.cs" />
      <Compile Include="Assets\Scripts\ForkliftController.cs" />
      <Compile Include="Assets\Scripts\FretController.cs" />
-     <Compile Include="Assets\Scripts\FretStrumController.cs" />
      <Compile Include="Assets\Scripts\GarageDoorController.cs" />
      <Compile Include="Assets\Scripts\GuiManager.cs" />
      <Compile Include="Assets\Scripts\HingeController.cs" />
-     <Compile Include="Assets\Scripts\HitController.cs" />
      <Compile Include="Assets\Scripts\RampController.cs" />
      <Compile Include="Assets\Scripts\SceneExit.cs" />
      <Compile Include="Assets\Scripts\StrumController.cs" />

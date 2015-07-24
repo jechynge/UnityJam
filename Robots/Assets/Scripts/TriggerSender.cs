@@ -7,8 +7,6 @@ public class TriggerSender : MonoBehaviour {
 	public bool isReversible = false;
 	public bool isAnimated = false;
 
-	public AudioClip sfxPushLever;
-
 	bool triggered = false;
 	Animator anim;
 
@@ -16,7 +14,6 @@ public class TriggerSender : MonoBehaviour {
 	void Start () {
 		if (isAnimated)
 			anim = GetComponent<Animator> ();
-		GetComponent <AudioSource> ().PlayOneShot (sfxPushLever);
 	}
 	
 	// Update is called once per frame

@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61a60c85f1c748f8a4783aa59e5e348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxCrush: {fileID: 8300000, guid: 24d92ad354c2f7c4483893f9c2d375b6, type: 3}
 --- !u!212 &21294940
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -133,11 +132,7 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: sfxCrush
-      value: 
-      objectReference: {fileID: 8300000, guid: 24d92ad354c2f7c4483893f9c2d375b6, type: 3}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 187050}

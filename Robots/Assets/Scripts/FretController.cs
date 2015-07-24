@@ -5,34 +5,22 @@ public class FretController : MonoBehaviour {
 
 	public float maxSpeed = 7.5f;
 	public float jumpForce = 400f;
-    public float hitMod = 2.0f;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
-    public GameObject strum;
 	
 	Animator anim;
 	Rigidbody2D body;
-    Collider[] colliders;
 
 	bool facingRight = true;
 	bool canJump = true;
 	bool canTrigger = true;
 	bool grounded = false;
-    bool smashed = false;
 	float groundRadius = 0.2f;
-    uint lastAttackId = 0;
-
-	public AudioClip sfxJump;
-	public AudioClip sfxLand;
-	public AudioClip sfxHurt;
-	public AudioClip sfxPushSmall;
-	public AudioClip sfxInteract;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
 		body = GetComponent<Rigidbody2D> ();
-        colliders = GetComponents<Collider>();
 	}
 	
 	// Update is called once per frame
@@ -41,6 +29,7 @@ public class FretController : MonoBehaviour {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 		anim.SetBool ("grounded", grounded);
 		anim.SetFloat ("vSpeed", body.velocity.y);
+
 
 		float move = Input.GetAxis ("FretHorizontal");
 
@@ -58,34 +47,16 @@ public class FretController : MonoBehaviour {
 	void Update () {
 		if(Input.GetAxis ("FretJump") == 0)
 			canJump = true;
-		GetComponent<AudioSource> ().PlayOneShot (sfxJump);
-	
-
 
 		if (Input.GetAxis ("FretInteract") == 0)
 			canTrigger = true;
-		GetComponent<AudioSource> ().PlayOneShot (sfxInteract);
 
-
-        if (Input.GetAxis("FretJump") > 0 && grounded && canJump && !smashed && Input.GetAxis("FretCombine1") == 0 && Input.GetAxis("FretCombine2") == 0)
-        {
+		if (Input.GetAxis ("FretJump") > 0 && grounded && canJump) {
 			canJump = false;
 			grounded = false;
 			anim.SetBool("grounded", grounded);
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
-			GetComponent<AudioSource> ().PlayOneShot (sfxJump);
-
 		}
-
-        if (smashed && body.velocity.y <= 0)
-        {
-            smashed = false;
-
-            foreach (Collider c in colliders)
-            {
-                c.isTrigger = false;
-            }
-        }
 	}
 
 	void OnTriggerStay2D(Collider2D coll) {
@@ -94,26 +65,6 @@ public class FretController : MonoBehaviour {
 			coll.gameObject.GetComponent<TriggerSender> ().SendTrigger ();
 		}
 	}
-
-    public void OnStrumSmash(uint attackId)
-    {
-        if (lastAttackId == attackId) return;
-
-        lastAttackId = attackId;
-        smashed = true;
-
-        foreach (Collider c in colliders)
-        {
-            c.isTrigger = true;
-        }
-
-        body.AddForce(new Vector2(0, jumpForce * hitMod));
-    }
-
-    public bool Combine()
-    {
-        return Input.GetAxis("FretCombine1") > 0 && Input.GetAxis("FretCombine2") > 0 && Input.GetAxis("FretJump") > 0;
-    }
 
 	void Flip() {
 		facingRight = !facingRight;

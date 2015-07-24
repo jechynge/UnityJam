@@ -6,18 +6,15 @@ public class StrumController : MonoBehaviour {
 	public float maxSpeed = 7.5f;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
-    public GameObject fret;
-    public GameObject fretStrumPrefab;
 	
 	Animator anim;
 	Rigidbody2D body;
 	
 	bool facingRight = true;
+	bool canSwing = true;
+    bool canSmash = true;
 	bool grounded = false;
 	float groundRadius = 0.2f;
-
-	public AudioClip sfxHurt;
-	public AudioClip sfxPushSmall;
 	
 	// Use this for initialization
 	void Start () {
@@ -44,26 +41,14 @@ public class StrumController : MonoBehaviour {
 			Flip ();
 		}
 	}
+	
+	void Update () {
+		if (Input.GetAxis ("StrumSwing") == 0)
+			canSwing = true;
 
-    void Update()
-    {
-        // If Strum is holding LT, RT, and the A button...
-        if (Input.GetAxis("StrumCombine1") > 0 && Input.GetAxis("StrumCombine2") > 0 && Input.GetAxis("StrumInteract") > 0)
-        {
-            // ...and is close enough to fret...
-            if (Vector3.Distance(transform.position, fret.transform.position) < 2.5f)
-            {
-                // ...and Fret is also holding down LT, RT, and the A button...
-                if (fret.GetComponent<FretController>().Combine())
-                {
-                    // DO IT UP, SOOOOOOOOOOOOOOON
-                    Instantiate(fretStrumPrefab, transform.position, transform.rotation);
-                    Destroy(fret);
-                    Destroy(gameObject);
-                }
-            }
-        }
-    }
+        if (Input.GetAxis("StrumSmash") == 0)
+            canSmash = true;
+	}
 	
 	void Flip() {
 		facingRight = !facingRight;
