@@ -68,7 +68,7 @@ public class AttackController : MonoBehaviour {
             case "under":
                 // We're hitting Fret
                 if(coll.tag == "Player")
-                    coll.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, hitForce));
+                    coll.GetComponent<FretController>().OnStrumSmash(currentAttackId);
                 break;
             case "over":
                 // We're hitting something that can be smashed
