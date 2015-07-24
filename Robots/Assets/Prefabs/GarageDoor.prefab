@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580738724fba84be0b8ef4c2a99e7379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxGarageDoor: {fileID: 8300000, guid: 31460234dfb1dc748bea94fa52f242d5, type: 3}
 --- !u!114 &11485618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,7 +145,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: sfxGarageDoor
+      value: 
+      objectReference: {fileID: 8300000, guid: 31460234dfb1dc748bea94fa52f242d5, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 158852}

@@ -106,6 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e913929e59a46eab6b90394d4c6f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxMoveUp: {fileID: 8300000, guid: c68c04504365c394a9a8b1020caaec25, type: 3}
+  sfxMoveDown: {fileID: 8300000, guid: c857ca35120e5884a8d014b1a0bdd41b, type: 3}
 --- !u!114 &11439866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,7 +151,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: sfxMoveDown
+      value: 
+      objectReference: {fileID: 8300000, guid: c857ca35120e5884a8d014b1a0bdd41b, type: 3}
+    - target: {fileID: 0}
+      propertyPath: sfxMoveUp
+      value: 
+      objectReference: {fileID: 8300000, guid: c68c04504365c394a9a8b1020caaec25, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 101158}

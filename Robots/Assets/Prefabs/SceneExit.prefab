@@ -54,13 +54,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Phase 2 Screen 2
+  sfxBothInDoor: {fileID: 8300000, guid: 5e3f2a6da58f78c4697efa46cfdeee43, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: sfxBothInDoor
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e3f2a6da58f78c4697efa46cfdeee43, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 127242}

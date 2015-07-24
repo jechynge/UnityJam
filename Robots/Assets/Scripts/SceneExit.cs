@@ -7,6 +7,8 @@ public class SceneExit : MonoBehaviour {
 	private bool fretIn;
 	private bool strumIn;
 
+	public AudioClip sfxBothInDoor;
+
 	// Use this for initialization
 	void Start () {
 		fretIn = false;
@@ -26,6 +28,7 @@ public class SceneExit : MonoBehaviour {
 		if (fretIn && strumIn) {
 			Debug.Log ("Changing level");
 			Application.LoadLevel (nextScene);
+			GetComponent<AudioSource> ().PlayOneShot (sfxBothInDoor);
 		}
 		fretIn = false;
 		strumIn = false;

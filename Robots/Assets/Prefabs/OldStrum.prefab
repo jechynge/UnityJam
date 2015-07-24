@@ -170,7 +170,7 @@ GameObject:
   - 61: {fileID: 6114912}
   - 114: {fileID: 11425230}
   m_Layer: 9
-  m_Name: Strum
+  m_Name: OldStrum
   m_TagString: Player 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -565,7 +565,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  pushPower: 2
+  fret: {fileID: 0}
+  sfxHurt: {fileID: 0}
+  sfxPushSmall: {fileID: 0}
 --- !u!212 &21214428
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -832,7 +834,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: sfxPushSmall
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: sfxHurt
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 174522}

@@ -2,19 +2,22 @@
 using System.Collections;
 
 public class CrushingController : MonoBehaviour {
-	Rigidbody2D rigidbody;
+
+    Animator anim;
+
+	public AudioClip sfxCrush;
+
 	// Use this for initialization
 	void Start () {
-	
+        anim = GetComponent<Animator>();
 	}
 
 	void OnCollisionEnter2D (Collision2D collision) {
 		if (collision.gameObject.tag == "Crusher") {
-			gameObject.GetComponent<Animator> ().SetBool ("crushed", true);
-			rigidbody = collision.gameObject.GetComponent<Rigidbody2D>();
-			//rigidbody.isKinematic = true;
+			anim.SetBool ("crushed", true);
 			collision.collider.isTrigger = true;
 			collision.gameObject.GetComponent <Animator>().SetBool("timetofall", true);
+			GetComponent <AudioSource> ().PlayOneShot (sfxCrush);
 		}
 	}
 

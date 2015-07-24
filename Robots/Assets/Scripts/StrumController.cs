@@ -6,24 +6,23 @@ public class StrumController : MonoBehaviour {
 	public float maxSpeed = 7.5f;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
+    public GameObject fret;
+    public GameObject fretStrumPrefab;
 	
 	Animator anim;
 	Rigidbody2D body;
-    DistanceJoint2D dragJoint;
 	
 	bool facingRight = true;
-	bool canSwing = true;
-    bool canSmash = true;
 	bool grounded = false;
 	float groundRadius = 0.2f;
-    float maxDragDistance = 2.0f;
+
+	public AudioClip sfxHurt;
+	public AudioClip sfxPushSmall;
 	
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
 		body = GetComponent<Rigidbody2D> ();
-        dragJoint = GetComponent<DistanceJoint2D>();
-        dragJoint.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -32,7 +31,6 @@ public class StrumController : MonoBehaviour {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 		anim.SetBool ("grounded", grounded);
 		anim.SetFloat ("vSpeed", body.velocity.y);
-		
 		
 		float move = Input.GetAxis ("StrumHorizontal");
 		
@@ -46,45 +44,25 @@ public class StrumController : MonoBehaviour {
 			Flip ();
 		}
 	}
-	
-	void Update () {
-		if (Input.GetAxis ("StrumSwing") == 0)
-			canSwing = true;
 
-        if (Input.GetAxis("StrumSmash") == 0)
-            canSmash = true;
-
-        // If we have the grab key down and we're not currently dragging something...
-        if (Input.GetAxis("StrumGrab") > 0 && dragJoint.connectedBody == null)
+    void Update()
+    {
+        // If Strum is holding LT, RT, and the A button...
+        if (Input.GetAxis("StrumCombine1") > 0 && Input.GetAxis("StrumCombine2") > 0 && Input.GetAxis("StrumInteract") > 0)
         {
-            // ... find the closest object ...
-            GameObject closest = GetClosestDraggable();
-
-            // ... and if it exists, drag it
-            if (closest != null)
+            // ...and is close enough to fret...
+            if (Vector3.Distance(transform.position, fret.transform.position) < 2.5f)
             {
-                DragObject(closest);
+                // ...and Fret is also holding down LT, RT, and the A button...
+                if (fret.GetComponent<FretController>().Combine())
+                {
+                    // DO IT UP, SOOOOOOOOOOOOOOON
+                    Instantiate(fretStrumPrefab, transform.position, transform.rotation);
+                    Destroy(fret);
+                    Destroy(gameObject);
+                }
             }
-
         }
-        // otherwise, if we don't have the grab key pressed and we're dragging something...
-        else if(Input.GetAxis("StrumGrab") == 0 && dragJoint.connectedBody != null)
-        {
-            // ...release the dragged object
-            ReleaseDraggedObject();
-        }
-	}
-
-    void DragObject(GameObject draggable)
-    {
-        dragJoint.connectedBody = draggable.GetComponent<Rigidbody2D>();
-        dragJoint.enabled = true;
-    }
-
-    void ReleaseDraggedObject()
-    {
-        dragJoint.connectedBody = null;
-        dragJoint.enabled = false;
     }
 	
 	void Flip() {
@@ -93,30 +71,4 @@ public class StrumController : MonoBehaviour {
 		scale.x *= -1;
 		transform.localScale = scale;
 	}
- 
-     GameObject GetClosestDraggable () 
-     {
-         GameObject closest = null;
-         float closestDistance = Mathf.Infinity;
-         GameObject[] draggables = GameObject.FindGameObjectsWithTag("Draggable");
-
-         foreach(GameObject o in draggables) {
-             float distance = Mathf.Abs(Vector3.Distance(transform.position, o.transform.position));
-
-             // Item is "behind" the player and shouldn't be dragged
-             if(facingRight && transform.position.x - o.transform.position.x > 0) 
-                 continue;
-
-             if (!facingRight && transform.position.x - o.transform.position.x < 0)
-                 continue;
-
-             if (distance < closestDistance)
-             {
-                 closest = o;
-                 closestDistance = distance;
-             }
-         }
-     
-         return closestDistance <= maxDragDistance ? closest : null;
-     }
 }

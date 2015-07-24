@@ -1,9 +1,19 @@
 fileFormatVersion: 2
 guid: ad8d2141b338bcb4b96112b40c900e7e
-timeCreated: 1437432494
+timeCreated: 1437722180
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: fretstrum_combo_2_0
+    21300002: fretstrum_combo_2_1
+    21300004: fretstrum_combo_2_2
+    21300006: fretstrum_combo_2_3
+    21300008: fretstrum_combo_2_4
+    21300010: fretstrum_combo_2_5
+    21300012: fretstrum_combo_2_6
+    21300014: fretstrum_combo_2_7
+    21300016: fretstrum_combo_2_8
+    21300018: fretstrum_combo_2_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -27,28 +37,128 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 2048
+  maxTextureSize: 4096
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 600
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: fretstrum_combo_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 788
+        width: 272
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fretstrum_combo_2_1
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1243
+        width: 267
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fretstrum_combo_2_2
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 825
+        width: 702
+        height: 1171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fretstrum_combo_2_3
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 1248
+        width: 269
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fretstrum_combo_2_4
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 788
+        width: 276
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fretstrum_combo_2_5
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 586
+        width: 744
+        height: 866
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fretstrum_combo_2_6
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 539
+        width: 108
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fretstrum_combo_2_7
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 538
+        width: 109
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fretstrum_combo_2_8
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 0
+        width: 154
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fretstrum_combo_2_9
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 0
+        width: 203
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
