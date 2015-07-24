@@ -47,8 +47,9 @@ public class StrumController : MonoBehaviour {
 
     void Update()
     {
+        // Below is the combine code. Maybe we should set a flag to make sure that they don't do this before the last level?
         // If Strum is holding LT, RT, and the A button...
-        if (Input.GetAxis("StrumCombine1") > 0 && Input.GetAxis("StrumCombine2") > 0 && Input.GetAxis("StrumInteract") > 0)
+        if (Input.GetAxis("StrumCombine1") > 0 && Input.GetAxis("StrumCombine2") > 0 && Input.GetAxis("StrumCombine") > 0)
         {
             // ...and is close enough to fret...
             if (Vector3.Distance(transform.position, fret.transform.position) < 2.5f)
