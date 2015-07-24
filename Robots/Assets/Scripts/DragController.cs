@@ -4,6 +4,8 @@ using System.Collections;
 public class DragController : MonoBehaviour {
 
     public float maxDragDistance = 2.0f;
+
+	public AudioClip sfxDragging;
     
     DistanceJoint2D dragJoint;
 
@@ -29,6 +31,7 @@ public class DragController : MonoBehaviour {
             if (closest != null)
             {
                 DragObject(closest);
+				GetComponent <AudioSource> ().PlayOneShot (sfxDragging);
             }
 
         }

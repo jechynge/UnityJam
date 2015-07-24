@@ -534,6 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 6
   jumpForce: 600
+  hitMod: 2
   groundCheck: {fileID: 481534}
   whatIsGround:
     serializedVersion: 2
@@ -542,7 +543,7 @@ MonoBehaviour:
   sfxJump: {fileID: 8300000, guid: 2d41f676bb8c8f348a0df9fddf690055, type: 3}
   sfxLand: {fileID: 8300000, guid: 63eea209e874b8d43a8f75e42dd0ec61, type: 3}
   sfxHurt: {fileID: 8300000, guid: 0625f44fd95374948a91e7a8eb693d1c, type: 3}
-  sfxPushSmall: {fileID: 0}
+  sfxPushSmall: {fileID: 8300000, guid: bd7d7276615b24c4bbfce52e548d96a3, type: 3}
   sfxInteract: {fileID: 8300000, guid: ec749399ac13d444f9cf704516e77791, type: 3}
 --- !u!212 &21208306
 SpriteRenderer:
@@ -827,6 +828,10 @@ Prefab:
       propertyPath: sfxHurt
       value: 
       objectReference: {fileID: 8300000, guid: 0625f44fd95374948a91e7a8eb693d1c, type: 3}
+    - target: {fileID: 0}
+      propertyPath: sfxPushSmall
+      value: 
+      objectReference: {fileID: 8300000, guid: bd7d7276615b24c4bbfce52e548d96a3, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132904}

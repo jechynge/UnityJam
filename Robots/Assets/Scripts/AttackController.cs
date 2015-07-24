@@ -8,6 +8,10 @@ public class AttackController : MonoBehaviour {
     public List<string> smashableTags;
     public CircleCollider2D attackCollider;
 
+	public AudioClip sfxattackUnderHand;
+	public AudioClip sfxattackOverHand;
+	//two for strum, 
+
     Animator anim;
 
     bool canAttackUnderhand = true;
@@ -47,6 +51,7 @@ public class AttackController : MonoBehaviour {
             isAttacking = true;
             currentAttack = "under";
             currentAttackId++;
+			GetComponent <AudioSource> ().PlayOneShot (sfxattackUnderHand);
         }
 
         if (Input.GetAxis("StrumOverhand") > 0 && canAttackOverhand && !isAttacking)
@@ -56,6 +61,7 @@ public class AttackController : MonoBehaviour {
             isAttacking = true;
             currentAttack = "over";
             currentAttackId++;
+			GetComponent <AudioSource> ().PlayOneShot (sfxattackOverHand);
         }
 	}
 

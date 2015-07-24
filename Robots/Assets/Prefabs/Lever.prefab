@@ -133,6 +133,7 @@ MonoBehaviour:
   - {fileID: 0}
   isReversible: 1
   isAnimated: 1
+  sfxPushLever: {fileID: 8300000, guid: bf1393ef111ec1145aeab51c92ce5145, type: 3}
 --- !u!212 &21276434
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -191,7 +192,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: sfxPushLever
+      value: 
+      objectReference: {fileID: 8300000, guid: bf1393ef111ec1145aeab51c92ce5145, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 192904}

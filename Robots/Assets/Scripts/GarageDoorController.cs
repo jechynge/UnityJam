@@ -4,6 +4,8 @@ using System.Collections;
 public class GarageDoorController : MonoBehaviour {
 
 	Animator animator;
+
+	public AudioClip sfxGarageDoor;
 	
 	// Use this for initialization
 	void Start () {
@@ -23,6 +25,7 @@ public class GarageDoorController : MonoBehaviour {
 		if (triggered) {
 			animator.SetBool ("doorup", true);
 			gameObject.GetComponent<BoxCollider2D>().enabled = true;
+			GetComponent <AudioSource> ().PlayOneShot (sfxGarageDoor);
 
 		} else {
 			animator.SetBool ("doorup", false);

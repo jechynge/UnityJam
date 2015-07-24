@@ -5,6 +5,8 @@ public class CrushingController : MonoBehaviour {
 
     Animator anim;
 
+	public AudioClip sfxCrush;
+
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
@@ -15,6 +17,7 @@ public class CrushingController : MonoBehaviour {
 			anim.SetBool ("crushed", true);
 			collision.collider.isTrigger = true;
 			collision.gameObject.GetComponent <Animator>().SetBool("timetofall", true);
+			GetComponent <AudioSource> ().PlayOneShot (sfxCrush);
 		}
 	}
 

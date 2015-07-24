@@ -7,6 +7,8 @@ public class TriggerSenderButton : MonoBehaviour {
 	public bool isReversible = false;
 	public bool isAnimated = false;
 
+	public AudioClip sfxButtonPress;
+
 	bool triggered = false;
 	Animator anim;
 	bool thingOnButton = false;
@@ -31,6 +33,7 @@ public class TriggerSenderButton : MonoBehaviour {
 		thingOnButton = true;
 		if (!triggered)
 			SendTrigger ();
+		GetComponent <AudioSource> ().PlayOneShot (sfxButtonPress);
 	}
 
 	void OnCollisionExit2D (Collision2D collision) {

@@ -14,6 +14,9 @@ public class StrumController : MonoBehaviour {
 	bool facingRight = true;
 	bool grounded = false;
 	float groundRadius = 0.2f;
+
+	public AudioClip sfxHurt;
+	public AudioClip sfxPushSmall;
 	
 	// Use this for initialization
 	void Start () {

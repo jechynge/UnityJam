@@ -59,6 +59,7 @@ public class FretController : MonoBehaviour {
 		if(Input.GetAxis ("FretJump") == 0)
 			canJump = true;
 		GetComponent<AudioSource> ().PlayOneShot (sfxJump);
+	
 
 
 		if (Input.GetAxis ("FretInteract") == 0)

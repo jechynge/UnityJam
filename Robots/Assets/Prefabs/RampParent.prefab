@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d0c66ae485c4ca688d2344ef159ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxHingeController: {fileID: 8300000, guid: 36b5633a8f273654abb65cc0bb8f4f3d, type: 3}
 --- !u!212 &21267910
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -144,7 +145,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: sfxHingeController
+      value: 
+      objectReference: {fileID: 8300000, guid: 36b5633a8f273654abb65cc0bb8f4f3d, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 165250}
