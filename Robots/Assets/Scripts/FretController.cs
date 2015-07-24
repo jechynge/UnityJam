@@ -7,6 +7,7 @@ public class FretController : MonoBehaviour {
 	public float jumpForce = 400f;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
+    public GameObject strum;
 	
 	Animator anim;
 	Rigidbody2D body;

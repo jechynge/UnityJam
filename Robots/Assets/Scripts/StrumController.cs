@@ -6,6 +6,7 @@ public class StrumController : MonoBehaviour {
 	public float maxSpeed = 7.5f;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
+    public GameObject fret;
 	
 	Animator anim;
 	Rigidbody2D body;
@@ -40,14 +41,6 @@ public class StrumController : MonoBehaviour {
 		} else if (move < 0 && facingRight) {
 			Flip ();
 		}
-	}
-	
-	void Update () {
-		if (Input.GetAxis ("StrumSwing") == 0)
-			canSwing = true;
-
-        if (Input.GetAxis("StrumSmash") == 0)
-            canSmash = true;
 	}
 	
 	void Flip() {
