@@ -69,6 +69,7 @@ public class FretController : MonoBehaviour {
 
         if (Input.GetAxis("FretJump") > 0 && grounded && canJump && !smashed)
         {
+			Debug.Log ("Jumping");
 			canJump = false;
 			grounded = false;
 			anim.SetBool("grounded", grounded);

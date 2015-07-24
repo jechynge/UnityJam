@@ -170,7 +170,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458802, guid: 35843e9acd4354995963f37ac6914a9b, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35843e9acd4354995963f37ac6914a9b, type: 2}
@@ -297,7 +297,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 474172, guid: f8d460c7d9bb22d499905fc3f3c3f2b2, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8d460c7d9bb22d499905fc3f3c3f2b2, type: 2}
@@ -339,7 +339,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496586, guid: 65d464452abb1b54fa4bad4b442e86e5, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65d464452abb1b54fa4bad4b442e86e5, type: 2}
@@ -381,7 +381,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 492432, guid: 4ec0fbc8c9fdafc428e430af6368880c, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ec0fbc8c9fdafc428e430af6368880c, type: 2}
@@ -423,7 +423,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 460040, guid: 7ca6ce43110bf46be927e9fc39c27015, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11451062, guid: 7ca6ce43110bf46be927e9fc39c27015, type: 2}
       propertyPath: nextScene
@@ -431,4 +431,54 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ca6ce43110bf46be927e9fc39c27015, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2099114150
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 460856, guid: b7197ff991dc34cef9a06c3fc5a980c4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.975238323
+      objectReference: {fileID: 0}
+    - target: {fileID: 460856, guid: b7197ff991dc34cef9a06c3fc5a980c4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.33784783
+      objectReference: {fileID: 0}
+    - target: {fileID: 460856, guid: b7197ff991dc34cef9a06c3fc5a980c4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .01953125
+      objectReference: {fileID: 0}
+    - target: {fileID: 460856, guid: b7197ff991dc34cef9a06c3fc5a980c4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 460856, guid: b7197ff991dc34cef9a06c3fc5a980c4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 460856, guid: b7197ff991dc34cef9a06c3fc5a980c4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 460856, guid: b7197ff991dc34cef9a06c3fc5a980c4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 460856, guid: b7197ff991dc34cef9a06c3fc5a980c4, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297538, guid: b7197ff991dc34cef9a06c3fc5a980c4, type: 2}
+      propertyPath: m_Volume
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297538, guid: b7197ff991dc34cef9a06c3fc5a980c4, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b5072c2bc270b43fba2227b9e25f327b, type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b7197ff991dc34cef9a06c3fc5a980c4, type: 2}
   m_IsPrefabParent: 0
