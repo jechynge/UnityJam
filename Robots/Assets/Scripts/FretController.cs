@@ -27,6 +27,7 @@ public class FretController : MonoBehaviour {
 	public AudioClip sfxHurt;
 	public AudioClip sfxPushSmall;
 	public AudioClip sfxInteract;
+	public AudioClip sfxTossed;
 
 	// Use this for initialization
 	void Start () {
@@ -58,13 +59,13 @@ public class FretController : MonoBehaviour {
 	void Update () {
 		if(Input.GetAxis ("FretJump") == 0)
 			canJump = true;
-		GetComponent<AudioSource> ().PlayOneShot (sfxJump);
+		//GetComponent<AudioSource> ().PlayOneShot (sfxJump);
 	
 
 
 		if (Input.GetAxis ("FretInteract") == 0)
 			canTrigger = true;
-		GetComponent<AudioSource> ().PlayOneShot (sfxInteract);
+		//GetComponent<AudioSource> ().PlayOneShot (sfxInteract);
 
 
         if (Input.GetAxis("FretJump") > 0 && grounded && canJump && !smashed)
@@ -92,6 +93,8 @@ public class FretController : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D coll) {
 		if (Input.GetAxis ("FretInteract") > 0 && coll.gameObject.tag == "Interactive" && canTrigger) {
 			canTrigger = false;
+			GetComponent<AudioSource> ().PlayOneShot (sfxInteract);
+
 			coll.gameObject.GetComponent<TriggerSender> ().SendTrigger ();
 		}
 	}
@@ -107,6 +110,7 @@ public class FretController : MonoBehaviour {
         {
             c.isTrigger = true;
         }
+		GetComponent<AudioSource> ().PlayOneShot (sfxTossed);
 
         body.AddForce(new Vector2(0, jumpForce * hitMod));
     }

@@ -13,6 +13,9 @@ TagManager:
   - Crusher
   - Player 2
   - Smashable
+  - Player 3
+  - CombineChecker
+  - Security
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ public class TriggerSender : MonoBehaviour {
 	void Start () {
 		if (isAnimated)
 			anim = GetComponent<Animator> ();
-		GetComponent <AudioSource> ().PlayOneShot (sfxPushLever);
+		//GetComponent <AudioSource> ().PlayOneShot (sfxPushLever);
 	}
 	
 	// Update is called once per frame

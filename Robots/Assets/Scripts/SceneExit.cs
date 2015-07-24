@@ -21,6 +21,10 @@ public class SceneExit : MonoBehaviour {
 			fretIn = true;
 		if (collider.gameObject.tag == "Player 2") 
 			strumIn = true;
+		if (GameObject.FindGameObjectWithTag ("CombineChecker") != null) {
+			fretIn = true;
+			strumIn = true;
+		}
 	}
 	// Update is called once per frame
 	void Update () {
