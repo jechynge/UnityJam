@@ -7,6 +7,7 @@ public class StrumController : MonoBehaviour {
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
     public GameObject fret;
+    public GameObject fretStrumPrefab;
 	
 	Animator anim;
 	Rigidbody2D body;
@@ -43,6 +44,26 @@ public class StrumController : MonoBehaviour {
 			Flip ();
 		}
 	}
+
+    void Update()
+    {
+        // If Strum is holding LT, RT, and the A button...
+        if (Input.GetAxis("StrumCombine1") > 0 && Input.GetAxis("StrumCombine2") > 0 && Input.GetAxis("StrumInteract") > 0)
+        {
+            // ...and is close enough to fret...
+            if (Vector3.Distance(transform.position, fret.transform.position) < 2.5f)
+            {
+                // ...and Fret is also holding down LT, RT, and the A button...
+                if (fret.GetComponent<FretController>().Combine())
+                {
+                    // DO IT UP, SOOOOOOOOOOOOOOON
+                    Instantiate(fretStrumPrefab, transform.position, transform.rotation);
+                    Destroy(fret);
+                    Destroy(gameObject);
+                }
+            }
+        }
+    }
 	
 	void Flip() {
 		facingRight = !facingRight;

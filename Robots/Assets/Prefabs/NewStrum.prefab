@@ -596,6 +596,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   fret: {fileID: 0}
+  fretStrumPrefab: {fileID: 0}
   sfxHurt: {fileID: 8300000, guid: 9f2df2d452f901b41a3f7b5cdde44ae2, type: 3}
   sfxPushSmall: {fileID: 8300000, guid: b24110a29eb56bc4b959618972ad8b50, type: 3}
 --- !u!114 &11476630
@@ -612,6 +613,7 @@ MonoBehaviour:
   isAttacking: 0
   hitForce: 1000
   smashableTags:
+  - Smashable
   - Draggable
   attackCollider: {fileID: 5821592}
   sfxattackUnderHand: {fileID: 8300000, guid: ea565d669a1f18f4faf697e003e04a9a, type: 3}
@@ -898,6 +900,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: smashableTags.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: sfxPushSmall
       value: 
       objectReference: {fileID: 8300000, guid: b24110a29eb56bc4b959618972ad8b50, type: 3}
@@ -917,6 +923,10 @@ Prefab:
       propertyPath: sfxattackOverHand
       value: 
       objectReference: {fileID: 8300000, guid: f04d10f21958c8c44b72f15992e85ca0, type: 3}
+    - target: {fileID: 0}
+      propertyPath: smashableTags.Array.data[0]
+      value: Smashable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 122132}
