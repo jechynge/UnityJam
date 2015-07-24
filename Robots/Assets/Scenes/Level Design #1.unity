@@ -225,6 +225,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+  m_StereoMirrorMode: 0
 --- !u!4 &132525033
 Transform:
   m_ObjectHideFlags: 0
@@ -647,8 +648,7 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -763,8 +763,7 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -975,7 +974,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d86ffc42955f1934cb077ad3d873533a, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &385854900
+--- !u!4 &385854900 stripped
 Transform:
   m_PrefabParentObject: {fileID: 474252, guid: d86ffc42955f1934cb077ad3d873533a, type: 2}
   m_PrefabInternal: {fileID: 385854899}
@@ -1222,7 +1221,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!4 &547642767
+--- !u!4 &547642767 stripped
 Transform:
   m_PrefabParentObject: {fileID: 466500, guid: 94009ab018285bd4aa4c07ec5f43ddd7, type: 2}
   m_PrefabInternal: {fileID: 1494500617}
@@ -1532,10 +1531,84 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 757997772}
---- !u!4 &779208430
+--- !u!4 &779208430 stripped
 Transform:
   m_PrefabParentObject: {fileID: 401564, guid: e451dc2b93ae8b54b99685ae666e83c5, type: 2}
   m_PrefabInternal: {fileID: 399423881}
+--- !u!1 &800513497 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 174522, guid: 60594425002fd8a42898e28cc6433827, type: 2}
+  m_PrefabInternal: {fileID: 1247819406}
+--- !u!82 &800513503
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800513497}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24360550, guid: da2fe8b69a4a7c14db52b4df9ea8fc95,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &802625714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1717,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ec0fbc8c9fdafc428e430af6368880c, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &832004895
+--- !u!4 &832004895 stripped
 Transform:
   m_PrefabParentObject: {fileID: 492432, guid: 4ec0fbc8c9fdafc428e430af6368880c, type: 2}
   m_PrefabInternal: {fileID: 832004894}
@@ -2178,10 +2251,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9dcb16271094a24ea8de1e84ae2cbef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScrPaused: {fileID: 0}
+  ScrPaused: {fileID: 376760824}
   ScrGameplay: {fileID: 0}
-  ScrTitle: {fileID: 0}
-  ScrCredits: {fileID: 0}
+  ScrTitle: {fileID: 516792750}
+  ScrCredits: {fileID: 144256115}
   ScrDeath: {fileID: 0}
   SfxButton: {fileID: 0}
   myCamera: {fileID: 0}
@@ -2299,6 +2372,7 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
+  m_RepeatDelay: .5
   m_AllowActivationOnMobileDevice: 0
 --- !u!114 &1481602547
 MonoBehaviour:
@@ -2480,7 +2554,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5801a9eb661c5fa499e78a784693a01f, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1552713546
+--- !u!4 &1552713546 stripped
 Transform:
   m_PrefabParentObject: {fileID: 441588, guid: 5801a9eb661c5fa499e78a784693a01f, type: 2}
   m_PrefabInternal: {fileID: 1552713545}
@@ -2680,8 +2754,7 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2716,7 +2789,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1764105913}
---- !u!4 &1772848928
+--- !u!4 &1772848928 stripped
 Transform:
   m_PrefabParentObject: {fileID: 404642, guid: 60594425002fd8a42898e28cc6433827, type: 2}
   m_PrefabInternal: {fileID: 1247819406}
@@ -2854,8 +2927,7 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2932,7 +3004,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c27ce940ed00572479178043251373aa, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1857068564
+--- !u!4 &1857068564 stripped
 Transform:
   m_PrefabParentObject: {fileID: 474516, guid: c27ce940ed00572479178043251373aa, type: 2}
   m_PrefabInternal: {fileID: 1857068563}
@@ -2998,8 +3070,7 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3172,7 +3243,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dfc650dbae3292f40a5688a7ce5a6177, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &2041843954
+--- !u!4 &2041843954 stripped
 Transform:
   m_PrefabParentObject: {fileID: 476980, guid: dfc650dbae3292f40a5688a7ce5a6177, type: 2}
   m_PrefabInternal: {fileID: 2041843953}

@@ -22,6 +22,12 @@ public class FretController : MonoBehaviour {
 	float groundRadius = 0.2f;
     uint lastAttackId = 0;
 
+	public AudioClip sfxJump;
+	public AudioClip sfxLand;
+	public AudioClip sfxHurt;
+	public AudioClip sfxPushSmall;
+	public AudioClip sfxInteract;
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -52,15 +58,21 @@ public class FretController : MonoBehaviour {
 	void Update () {
 		if(Input.GetAxis ("FretJump") == 0)
 			canJump = true;
+		GetComponent<AudioSource> ().PlayOneShot (sfxJump);
+
 
 		if (Input.GetAxis ("FretInteract") == 0)
 			canTrigger = true;
+		GetComponent<AudioSource> ().PlayOneShot (sfxInteract);
+
 
 		if (Input.GetAxis ("FretJump") > 0 && grounded && canJump && !smashed) {
 			canJump = false;
 			grounded = false;
 			anim.SetBool("grounded", grounded);
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+			GetComponent<AudioSource> ().PlayOneShot (sfxJump);
+
 		}
 
         if (smashed && body.velocity.y <= 0)
